@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/asistent0/nodejs-lesson-2/issues"
   },
-  "homepage": "https://github.com/asistent0/nodejs-lesson-2#readme"
+  "homepage": "https://github.com/asistent0/nodejs-lesson-2#readme",
+  "dependencies": {
+    "minimist": "^1.2.0"
+  }
 }
