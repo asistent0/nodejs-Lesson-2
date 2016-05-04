@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "play": "node index.js",
+    "stat": "node index.js log.txt",
+    "clear": "node index.js -c"
   },
   "repository": {
     "type": "git",
