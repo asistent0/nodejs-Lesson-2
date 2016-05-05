@@ -19,20 +19,25 @@ rl.on('line', function (cmd) {
     if (cmd === 'q') {
         this.close();
     } else {
-        console.log('Вы выбрали "' + cmd + '", Компьютер выбрал "' + sideCoin[rand][0] + '"');
         var string;
-        if (cmd === sideCoin[rand][0]) {
-            console.log('Урааа! Вы выиграли!');
-            string = "Win\n";
+        if ((cmd === '1') || (cmd === '2') || (cmd === 'q')) {
+            console.log('Вы выбрали "' + cmd + '", Компьютер выбрал "' + sideCoin[rand][0] + '"');
+            if (cmd === sideCoin[rand][0]) {
+                console.log('Урааа! Вы выиграли!');
+                string = "Win\n";
+            } else {
+                console.log('Упс. Вы проиграли.');
+                string = "Loss\n";
+            }
+
+            fs.appendFile('log.txt', string, function (err) {
+                if (err) {
+                    throw err;
+                }
+            });
         } else {
-            console.log('Упс. Вы проиграли.');
-            string = "Loss\n";
+            console.log('Вы ввели что то не то');
         }
         start();
-        fs.appendFile('log.txt', string, function (err) {
-            if (err) {
-                throw err;
-            }
-        });
     }
 });
