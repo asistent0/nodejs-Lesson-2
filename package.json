@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "play": "node index.js",
+    "start": "node index.js",
     "stat": "node stat.js",
     "clear": "node clear.js"
   },
